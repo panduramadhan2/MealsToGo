@@ -1,12 +1,8 @@
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+import { LogBox } from "react-native";
 import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components/native";
-// import * as firebase from "firebase";
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
-import "firebase/compat/firestore";
-// import firebase from "firebase";
-// require("firebase/auth");
+import * as firebase from "firebase";
 
 import {
   useFonts as useOswald,
@@ -35,6 +31,7 @@ if (!firebase.apps.length) {
 }
 
 export default function App() {
+  LogBox.ignoreAllLogs();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   useEffect(() => {
     setTimeout(() => {
