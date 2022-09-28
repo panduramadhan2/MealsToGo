@@ -1,5 +1,5 @@
 import React from "react";
-import LottieView from "lottie-react-native";
+import Lottie from "lottie-react-native";
 
 import { Spacer } from "../../../components/spacer/spacer.component";
 import {
@@ -16,7 +16,7 @@ export const AccountScreen = ({ navigation }) => {
     <AccountBackground>
       <AccountCover />
       <AnimationWrapper>
-        <LottieView
+        <Lottie
           key="animation"
           autoPlay
           loop
