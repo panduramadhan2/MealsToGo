@@ -7,6 +7,7 @@ import { RestaurantsContext } from "../../../services/restaurants/restaurants.co
 
 import { Search } from "../components/search.component";
 import { MapCallout } from "../components/map.callout.component";
+import { SafeArea } from "../../../components/utility/safe-area.component";
 
 const Map = styled(MapView)`
   height: 100%;
@@ -29,7 +30,7 @@ export const MapScreen = ({ navigation }) => {
   }, [location, viewport]);
 
   return (
-    <>
+    <SafeArea>
       <Search />
       <Map
         region={{
@@ -62,6 +63,6 @@ export const MapScreen = ({ navigation }) => {
           );
         })}
       </Map>
-    </>
+    </SafeArea>
   );
 };
